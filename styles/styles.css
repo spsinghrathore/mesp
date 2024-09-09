@@ -1,0 +1,211 @@
+:root {
+    --clr-dark: black;
+    --clr-light: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    font-family: sans-serif;
+}
+
+.marquee-container {
+    position: fixed;
+    background-color: #000;
+    top: 0px;
+    width: 100%; /* Full width of the page */
+    overflow: hidden; /* Hide anything that overflows */
+    white-space: nowrap; /* Prevents line breaks */
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    z-index: 1;
+}
+
+.marquee-content {
+    display: flex;
+    gap: 1rem;
+    font-size: x-small;
+    animation: marquee 10s linear infinite; /* Scrolls continuously */
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0); /* Start at normal position */
+    }
+    to {
+        transform: translateX(-50%); /* Move left by half its width */
+    }
+}
+
+header {
+    padding-top: 30px;
+}
+
+.header__quote  {
+    padding: 20px;
+    padding-top: 30px;
+    margin: 1opx;
+    text-align: center;
+}
+
+
+#splashScreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--clr-dark);
+}
+
+#profileForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 90%;
+}
+
+#profileForm input, #profileForm button {
+    margin: 10px;
+    width: 100%;
+    max-width: 300px;
+}
+
+#mainContent {
+    display: none;
+    width: 100%;
+}
+
+.container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    text-align: center;
+}
+
+img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+}
+
+.life-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.progress-bar {
+    background-color: #3a3a3a;
+    border-radius: 25px;
+    height: 20px;
+    width: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar-inner {
+    background-color: lightgreen;
+    height: 100%;
+    width: 0%; /* Initial width */
+    transition: width 1s ease-in-out;
+}
+
+.progress-text {
+    color: var(--clr-light);
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
+
+/* Date picker styling */
+input[type="date"] {
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #000;
+    font-family: sans-serif;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    img {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    #profileForm input, #profileForm button {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 400px) {
+    img {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    #profileForm input, #profileForm button {
+        font-size: 0.9rem;
+    }
+}
+
+strong {
+    color: orange;
+}
+.main__today {
+    margin-top: 2rem;
+    padding:10px;
+    text-align: center;
+    font-size: small;
+    text-transform: uppercase;
+    border: 0.5px solid white;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 3%;
+    line-height: 1;
+}
+
+
+.footer__btns {
+    border: 1px solid black;
+    color: black;
+    display: flex;
+    padding:5px;
+    border-radius: 0;
+    background-color: #ffffff;
+    margin: 10px;
+    margin-bottom: 0px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: fixed;
+    bottom: 0px;
+    z-index: 1;
+        
+}
+.item {
+    border: 1px solid black;
+    text-align: center;
+    
+}
+.spline-container {
+    width: 100%;
+    height: 100vh;
+}
