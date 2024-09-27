@@ -125,3 +125,8 @@ import { Application } from '@splinetool/runtime';
 const canvas = document.getElementById('canvas3d');
 const app = new Application(canvas);
 app.load('https://prod.spline.design/7QWXu-3eMMQb8fdj/scene.splinecode');
+
+
+//importing body css
+import '../styles/components/body.css';
+
