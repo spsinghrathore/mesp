@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Hide the splash screen and show the main content
             document.getElementById('splashScreen').style.display = 'none';
+            console.log("it works");
             document.getElementById('mainContent').style.display = 'block';
 
             // Set the profile image and username in the main content
@@ -47,6 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Check if user data exists and update main content if available
     if (localStorage.getItem('username') && localStorage.getItem('profileImage') && localStorage.getItem('dob')) {
+        console.log('hiding splash screen');
         document.getElementById('splashScreen').style.display = 'none';
         document.getElementById('mainContent').style.display = 'block';
 

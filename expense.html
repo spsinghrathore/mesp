@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Expense Tracker</title>
+    <link rel="stylesheet" href="expense.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+
+        <!-- Monthly Savings -->
+        <form id="savings-form">
+            <input type="number" id="savings-goal" placeholder="Set Monthly Savings Goal" required>
+            <button type="submit">Set Savings Goal</button>
+        </form>
+        <div id="savings-info"></div>
+
+        <!-- Dashboard Overview -->
+        <div class="dashboard">
+            <h2>Expense Categories</h2>
+            <div id="category-summary">
+                <!-- Categories and Icons -->
+                <div class="category" id="category-food">
+                    <img src="icons/food.png" alt="Food">
+                    <p>Food: ₹0</p>
+                </div>
+                <div class="category" id="category-travel">
+                    <img src="icons/travel.png" alt="Travel">
+                    <p>Travel: ₹0</p>
+                </div>
+                <div class="category" id="category-home">
+                    <img src="icons/home.png" alt="Home">
+                    <p>Home: ₹0</p>
+                </div>
+                <div class="category" id="category-savings">
+                    <img src="icons/savings.png" alt="Savings">
+                    <p>Savings: ₹0</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Expense Form -->
+        <form id="expense-form">
+            <input type="text" id="expense-name" placeholder="Expense Name" required>
+            <input type="number" id="expense-amount" placeholder="Amount" required>
+            <input type="hidden" id="expense-date">
+            <select id="expense-category" required>
+                <option value="Food">Food</option>
+                <option value="Travel">Travel</option>
+                <option value="Home">Home</option>
+                <option value="Savings">Savings</option>
+            </select>
+            <button type="submit">Add Expense</button>
+        </form>
+
+        <!-- Expenses List -->
+        <div id="expense-list"></div>
+    </div>
+    <script src="expense.js"></script>
+</body>
+</html>
