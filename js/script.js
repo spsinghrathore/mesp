@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
             localStorage.setItem('dob', dob);
 
             // Hide the splash screen and show the main content
-            document.getElementById('splashScreen').style.display = 'none';
+            document.getElementById('profileForm').style.display = 'none';
             console.log("it works");
             document.getElementById('mainContent').style.display = 'block';
 
